@@ -107,3 +107,14 @@
 .calculator .display {
   border: 2px black solid;
 }
+
+@media screen and (min-width: 600px) {
+  .calculator {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .calculator {
+    width: 40vw;
+  }
+}

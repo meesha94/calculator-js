@@ -1,140 +1,148 @@
 * {
-    margin: 1rem;
-    padding: 1rem;
-    color: black;
+  margin: 1rem;
+  padding: 1rem;
+  color: black;
+}
+
+.calculator {
+  border: 3px solid black;
+  background-color: rgb(186, 245, 238);
+
+  .calculator__keys {
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: repeat(5 1fr);
+    grid-template-areas:
+      "plus minus times divide"
+      "seven eight nine equals"
+      "four five six equals"
+      "one two three equals"
+      "zero decimal clear equals";
+
+    .plus {
+      grid-area: plus;
+    }
+    .minus {
+      grid-area: minus;
+    }
+
+    .times {
+      grid-area: times;
+    }
+
+    .divide {
+      grid-area: divide;
+    }
+
+    #one {
+      grid-area: one;
+    }
+
+    #two {
+      grid-area: two;
+    }
+
+    #three {
+      grid-area: three;
+    }
+
+    #four {
+      grid-area: four;
+    }
+
+    #five {
+      grid-area: five;
+    }
+
+    #six {
+      grid-area: six;
+    }
+
+    #seven {
+      grid-area: seven;
+    }
+
+    #eight {
+      grid-area: eight;
+    }
+
+    #nine {
+      grid-area: nine;
+    }
+
+    #zero {
+      grid-area: zero;
+    }
+
+    #decimal {
+      grid-area: decimal;
+    }
+
+    #equals {
+      grid-area: equals;
+    }
   }
-  
+
+  textarea {
+    margin: 10px;
+    border: 2px solid aliceblue;
+    border-radius: 3px;
+  }
+
+  #plus {
+    background-color: purple;
+    border-radius: 40%;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: white;
+  }
+
+  #minus {
+    background-color: rgb(233, 25, 59);
+    border-radius: 40%;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: white;
+  }
+  #times {
+    background-color: rgb(19, 177, 19);
+    border-radius: 40%;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: white;
+  }
+
+  #divide {
+    background-color: rgb(49, 49, 241);
+    border-radius: 40%;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: white;
+  }
+  #equals {
+    background-color: rgb(233, 159, 21);
+    font-weight: bolder;
+  }
+
+  button {
+    background-color: rgb(241, 139, 161);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .display {
+    border: 2px black solid;
+  }
+}
+
+@media screen and (min-width: 600px) {
   .calculator {
-    border: 3px solid black;
-    background-color: rgb(186, 245, 238);
-  
-    .calculator__keys {
-      display: grid;
-      grid-template-columns: repeat(4 1fr);
-      grid-template-rows: repeat(5 1fr);
-      grid-template-areas:
-        "plus minus times divide"
-        "seven eight nine equals"
-        "four five six equals"
-        "one two three equals"
-        "zero decimal clear equals";
-  
-      .plus {
-        grid-area: plus;
-      }
-      .minus {
-        grid-area: minus;
-      }
-  
-      .times {
-        grid-area: times;
-      }
-  
-      .divide {
-        grid-area: divide;
-      }
-  
-      #one {
-        grid-area: one;
-      }
-  
-      #two {
-        grid-area: two;
-      }
-  
-      #three {
-        grid-area: three;
-      }
-  
-      #four {
-        grid-area: four;
-      }
-  
-      #five {
-        grid-area: five;
-      }
-  
-      #six {
-        grid-area: six;
-      }
-  
-      #seven {
-        grid-area: seven;
-      }
-  
-      #eight {
-        grid-area: eight;
-      }
-  
-      #nine {
-        grid-area: nine;
-      }
-  
-      #zero {
-        grid-area: zero;
-      }
-  
-      #decimal {
-        grid-area: decimal;
-      }
-  
-      #equals {
-        grid-area: equals;
-      }
-    };
-    
-    textarea{
-        margin: 10px;
-        border: 2px solid aliceblue;
-        border-radius: 3px;
-    };
+    width: 70vw;
+  }
+}
 
-
-      #plus {
-        background-color: purple;
-        border-radius: 40%;
-        font-size: 1rem;
-        font-weight: bolder;
-        color: white;
-      };
-    
-      #minus {
-        background-color: rgb(233, 25, 59);
-        border-radius: 40%;
-        font-size: 1rem;
-        font-weight: bolder;
-        color: white;
-      };
-      #times {
-        background-color: rgb(19, 177, 19);
-        border-radius: 40%;
-        font-size: 1rem;
-        font-weight: bolder;
-        color: white;
-      };
-    
-      #divide {
-        background-color: rgb(49, 49, 241);
-        border-radius: 40%;
-        font-size: 1rem;
-        font-weight: bolder;
-        color: white;
-      };
-      #equals {
-        background-color: rgb(233, 159, 21);
-        font-weight: bolder;
-      };
-    
-      button {
-        background-color: rgb(241, 139, 161);
-        font-size: 1rem;
-        font-weight: bold;
-      };
-    
-      .display {
-        border: 2px black solid;
-      }
-    };
-
-    
-    
+@media screen and (min-width: 992px) {
+  .calculator {
+    width: 40vw;
+  }
+} ;
