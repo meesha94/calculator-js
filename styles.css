@@ -1,0 +1,109 @@
+* {
+  margin: 1rem;
+  padding: 1rem;
+  color: black;
+}
+
+.calculator {
+  border: 3px solid black;
+  background-color: #baf5ee;
+}
+.calculator .calculator__keys {
+  display: grid;
+  grid-template-columns: repeat(4 1fr);
+  grid-template-rows: repeat(5 1fr);
+  grid-template-areas: "plus minus times divide" "seven eight nine equals" "four five six equals" "one two three equals" "zero decimal clear equals";
+}
+.calculator .calculator__keys .plus {
+  grid-area: plus;
+}
+.calculator .calculator__keys .minus {
+  grid-area: minus;
+}
+.calculator .calculator__keys .times {
+  grid-area: times;
+}
+.calculator .calculator__keys .divide {
+  grid-area: divide;
+}
+.calculator .calculator__keys #one {
+  grid-area: one;
+}
+.calculator .calculator__keys #two {
+  grid-area: two;
+}
+.calculator .calculator__keys #three {
+  grid-area: three;
+}
+.calculator .calculator__keys #four {
+  grid-area: four;
+}
+.calculator .calculator__keys #five {
+  grid-area: five;
+}
+.calculator .calculator__keys #six {
+  grid-area: six;
+}
+.calculator .calculator__keys #seven {
+  grid-area: seven;
+}
+.calculator .calculator__keys #eight {
+  grid-area: eight;
+}
+.calculator .calculator__keys #nine {
+  grid-area: nine;
+}
+.calculator .calculator__keys #zero {
+  grid-area: zero;
+}
+.calculator .calculator__keys #decimal {
+  grid-area: decimal;
+}
+.calculator .calculator__keys #equals {
+  grid-area: equals;
+}
+.calculator textarea {
+  margin: 10px;
+  border: 2px solid aliceblue;
+  border-radius: 3px;
+}
+.calculator #plus {
+  background-color: purple;
+  border-radius: 40%;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: white;
+}
+.calculator #minus {
+  background-color: #e9193b;
+  border-radius: 40%;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: white;
+}
+.calculator #times {
+  background-color: #13b113;
+  border-radius: 40%;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: white;
+}
+.calculator #divide {
+  background-color: #3131f1;
+  border-radius: 40%;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: white;
+}
+.calculator #equals {
+  background-color: #e99f15;
+  font-weight: bolder;
+}
+.calculator button {
+  background-color: #f18ba1;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.calculator .display {
+  border: 2px black solid;
+}

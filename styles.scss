@@ -82,5 +82,59 @@
         grid-area: equals;
       }
     };
-  
-}
+    
+    textarea{
+        margin: 10px;
+        border: 2px solid aliceblue;
+        border-radius: 3px;
+    };
+
+
+      #plus {
+        background-color: purple;
+        border-radius: 40%;
+        font-size: 1rem;
+        font-weight: bolder;
+        color: white;
+      };
+    
+      #minus {
+        background-color: rgb(233, 25, 59);
+        border-radius: 40%;
+        font-size: 1rem;
+        font-weight: bolder;
+        color: white;
+      };
+      #times {
+        background-color: rgb(19, 177, 19);
+        border-radius: 40%;
+        font-size: 1rem;
+        font-weight: bolder;
+        color: white;
+      };
+    
+      #divide {
+        background-color: rgb(49, 49, 241);
+        border-radius: 40%;
+        font-size: 1rem;
+        font-weight: bolder;
+        color: white;
+      };
+      #equals {
+        background-color: rgb(233, 159, 21);
+        font-weight: bolder;
+      };
+    
+      button {
+        background-color: rgb(241, 139, 161);
+        font-size: 1rem;
+        font-weight: bold;
+      };
+    
+      .display {
+        border: 2px black solid;
+      }
+    };
+
+    
+    
