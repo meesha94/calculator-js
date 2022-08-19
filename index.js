@@ -38,7 +38,7 @@ for (let index = 0; index<operationButtons.length; index++) {
             const mathsArray = input.split("*");
             const equation = (previousValue, currentValue) =>
             parseFloat(previousValue) * parseFloat(currentValue);
-            input = mathsArray.reduce (equation);
+            input = mathsArray.reduce(equation);
             input += operationButtons[index].innerText
         } else if (input.includes("/")){
             const mathsArray = input.split("/");
@@ -68,15 +68,17 @@ equalsButton.addEventListener("click", () => {
         answer = mathsArray.reduce(equation);
         document.querySelector(".answer-display").value = answer;
         input = "";
-        document.querySelector(".input-dislpay").value = input;
+        document.querySelector(".input-display").value = input;
     } else if (input.includes("*")){
         const mathsArray = input.split("*");
-        const equation = (previousValue,currentValue) => 
-        parseFloat(previousValue) * parseFloat(currentValue);
+        const equation = (previousValue, currentValue) => 
+            parseFloat(previousValue) * parseFloat(currentValue);
         answer = mathsArray.reduce(equation);
         document.querySelector(".answer-display").value = answer;
-        input = "";
+        input ="";
         document.querySelector(".input-display").value = input;
+        console.log(input)
+        console.log(answer)
     } else if (input.includes("/")) {
         const mathsArray = input.split("/");
         const equation = (previousValue, currentValue) =>
@@ -91,4 +93,7 @@ equalsButton.addEventListener("click", () => {
     }
 });
 };
+
+
+
 

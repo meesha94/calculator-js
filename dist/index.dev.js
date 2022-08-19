@@ -88,7 +88,7 @@ var _loop2 = function _loop2(_index) {
       answer = _mathsArray4.reduce(_equation4);
       document.querySelector(".answer-display").value = answer;
       input = "";
-      document.querySelector(".input-dislpay").value = input;
+      document.querySelector(".input-display").value = input;
     } else if (input.includes("*")) {
       var _mathsArray5 = input.split("*");
 
@@ -100,6 +100,8 @@ var _loop2 = function _loop2(_index) {
       document.querySelector(".answer-display").value = answer;
       input = "";
       document.querySelector(".input-display").value = input;
+      console.log(input);
+      console.log(answer);
     } else if (input.includes("/")) {
       var _mathsArray6 = input.split("/");
 
