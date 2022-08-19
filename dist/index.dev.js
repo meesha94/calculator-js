@@ -20,3 +20,14 @@ for (var index = 0; index < numberButtons.length; index++) {
 }
 
 ;
+
+var _loop2 = function _loop2(_index) {
+  operationButtons[_index].addEventListener("click", function () {
+    input += operationButtons[_index].innerText;
+    document.querySelector(".input").value = input;
+  });
+};
+
+for (var _index = 0; _index < operationButtons.length; _index++) {
+  _loop2(_index);
+}

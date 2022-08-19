@@ -15,3 +15,9 @@ for (let index=0; index<numberButtons.length; index++) {
     });
 };
 
+for (let index = 0; index<operationButtons.length; index++) {
+    operationButtons[index].addEventListener("click", () => {
+        input += operationButtons[index].innerText;
+        document.querySelector(".input").value = input;
+    })
+}
