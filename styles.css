@@ -8,58 +8,58 @@
   border: 3px solid black;
   background-color: #baf5ee;
 }
-.calculator .calculator__keys {
+.calculator .buttons {
   display: grid;
   grid-template-columns: repeat(4 1fr);
   grid-template-rows: repeat(5 1fr);
   grid-template-areas: "plus minus times divide" "seven eight nine equals" "four five six equals" "one two three equals" "zero decimal clear equals";
 }
-.calculator .calculator__keys .plus {
+.calculator .buttons .plus {
   grid-area: plus;
 }
-.calculator .calculator__keys .minus {
+.calculator .buttons .minus {
   grid-area: minus;
 }
-.calculator .calculator__keys .times {
+.calculator .buttons .times {
   grid-area: times;
 }
-.calculator .calculator__keys .divide {
+.calculator .buttons .divide {
   grid-area: divide;
 }
-.calculator .calculator__keys #one {
+.calculator .buttons #one {
   grid-area: one;
 }
-.calculator .calculator__keys #two {
+.calculator .buttons #two {
   grid-area: two;
 }
-.calculator .calculator__keys #three {
+.calculator .buttons #three {
   grid-area: three;
 }
-.calculator .calculator__keys #four {
+.calculator .buttons #four {
   grid-area: four;
 }
-.calculator .calculator__keys #five {
+.calculator .buttons #five {
   grid-area: five;
 }
-.calculator .calculator__keys #six {
+.calculator .buttons #six {
   grid-area: six;
 }
-.calculator .calculator__keys #seven {
+.calculator .buttons #seven {
   grid-area: seven;
 }
-.calculator .calculator__keys #eight {
+.calculator .buttons #eight {
   grid-area: eight;
 }
-.calculator .calculator__keys #nine {
+.calculator .buttons #nine {
   grid-area: nine;
 }
-.calculator .calculator__keys #zero {
+.calculator .buttons #zero {
   grid-area: zero;
 }
-.calculator .calculator__keys #decimal {
+.calculator .buttons #decimal {
   grid-area: decimal;
 }
-.calculator .calculator__keys #equals {
+.calculator .buttons #equals {
   grid-area: equals;
 }
 .calculator textarea {
@@ -110,11 +110,17 @@
 
 @media screen and (min-width: 600px) {
   .calculator {
-    width: 70vw;
+    width: 50vw;
   }
 }
 @media screen and (min-width: 992px) {
   .calculator {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 472px) {
+  .calculator {
     width: 40vw;
+    border-width: 70vw;
   }
 }
