@@ -124,4 +124,13 @@ for (var _index = 0; _index < operationButtons.length; _index++) {
   _loop2(_index);
 }
 
-;
+; //clear display with AC button is pressed
+
+var clearDisplay = function clearDisplay() {
+  input.value = "";
+  answer.value = "";
+  document.querySelector(".answer-display").value = "";
+  document.querySelector(".input-display").value = "";
+};
+
+clearButton.addEventListener("click", clearDisplay);

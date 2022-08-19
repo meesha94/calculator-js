@@ -95,5 +95,14 @@ equalsButton.addEventListener("click", () => {
 };
 
 
+//clear display with AC button is pressed
 
+const clearDisplay = () => {
+    input.value = "";
+    answer.value = "";
+    document.querySelector(".answer-display").value = "";
+    document.querySelector(".input-display").value = "";
+  };
+  
+  clearButton.addEventListener("click", clearDisplay);
 
