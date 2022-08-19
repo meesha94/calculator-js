@@ -21,6 +21,7 @@ for (var index = 0; index < numberButtons.length; index++) {
 }
 
 ; // iterare through operation keys, turn them into numbers from strings and what sum to do with each operation
+//then use the equals key to give functionalty to operations keys and show user the result
 
 var _loop2 = function _loop2(_index) {
   operationButtons[_index].addEventListener("click", function () {
@@ -124,7 +125,7 @@ for (var _index = 0; _index < operationButtons.length; _index++) {
   _loop2(_index);
 }
 
-; //clear display with AC button is pressed
+; //clear both displays when AC button is pressed
 
 var clearDisplay = function clearDisplay() {
   input.value = "";

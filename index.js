@@ -20,6 +20,7 @@ for (let index = 0; index < numberButtons.length; index++) {
 
 
 // iterare through operation keys, turn them into numbers from strings and what sum to do with each operation
+//then use the equals key to give functionalty to operations keys and show user the result
 for (let index = 0; index<operationButtons.length; index++) {
     operationButtons[index].addEventListener("click", () => {
         if(input.includes("+")){
@@ -95,7 +96,7 @@ equalsButton.addEventListener("click", () => {
 };
 
 
-//clear display with AC button is pressed
+//clear both displays when AC button is pressed
 
 const clearDisplay = () => {
     input.value = "";
