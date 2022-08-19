@@ -12,7 +12,7 @@ var input = ""; //iterate through number buttons and return the specific numnber
 var _loop = function _loop(index) {
   numberButtons[index].addEventListener("click", function () {
     input += numberButtons[index].innerText;
-    document.querySelector(".input").value = input;
+    document.querySelector(".input-display").value = input;
   });
 };
 
@@ -62,7 +62,58 @@ var _loop2 = function _loop2(_index) {
       input += operationButtons[_index].innerText;
     } else {
       input += operationButtons[_index].innerText;
-      document.querySelector(".input").value = input;
+      document.querySelector(".input-display").value = input;
+    }
+  });
+
+  equalsButton.addEventListener("click", function () {
+    if (input.includes("+")) {
+      var mathsArray = input.split("+");
+
+      var equation = function equation(previousValue, currentValue) {
+        return parseFloat(previousValue) + parseFloat(currentValue);
+      };
+
+      answer = mathsArray.reduce(equation);
+      document.querySelector(".answer-display").value = answer;
+      input = "";
+      document.querySelector(".input-display").value = input;
+    } else if (input.includes("-")) {
+      var _mathsArray4 = input.split("-");
+
+      var _equation4 = function _equation4(previousValue, currentValue) {
+        return parseFloat(previousValue) - parseFloat(currentValue);
+      };
+
+      answer = _mathsArray4.reduce(_equation4);
+      document.querySelector(".answer-display").value = answer;
+      input = "";
+      document.querySelector(".input-dislpay").value = input;
+    } else if (input.includes("*")) {
+      var _mathsArray5 = input.split("*");
+
+      var _equation5 = function _equation5(previousValue, currentValue) {
+        return parseFloat(previousValue) * parseFloat(currentValue);
+      };
+
+      answer = _mathsArray5.reduce(_equation5);
+      document.querySelector(".answer-display").value = answer;
+      input = "";
+      document.querySelector(".input-display").value = input;
+    } else if (input.includes("/")) {
+      var _mathsArray6 = input.split("/");
+
+      var _equation6 = function _equation6(previousValue, currentValue) {
+        return parseFloat(previousValue) / parseFloat(currentValue);
+      };
+
+      answer = _mathsArray6.reduce(_equation6);
+      document.querySelector(".answer-display").value = answer;
+      input = "";
+      document.querySelector(".input-display").value = input;
+    } else {
+      answer = input;
+      input = "";
     }
   });
 };
@@ -70,3 +121,5 @@ var _loop2 = function _loop2(_index) {
 for (var _index = 0; _index < operationButtons.length; _index++) {
   _loop2(_index);
 }
+
+;

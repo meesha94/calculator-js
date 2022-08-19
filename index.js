@@ -11,10 +11,10 @@ let input = "";
 
 //iterate through number buttons and return the specific numnber
 
-for (let index=0; index<numberButtons.length; index++) {
-    numberButtons[index].addEventListener("click",  () => {
+for (let index = 0; index < numberButtons.length; index++) {
+    numberButtons[index].addEventListener("click", () => {
         input += numberButtons[index].innerText;
-        document.querySelector(".input").value = input;
+        document.querySelector(".input-display").value = input;
     });
 };
 
@@ -48,14 +48,47 @@ for (let index = 0; index<operationButtons.length; index++) {
             input += operationButtons[index].innerText
         } else {
         input += operationButtons[index].innerText;
-        document.querySelector(".input").value = input;
+        document.querySelector(".input-display").value = input;
         }
     })
 
-    
+equalsButton.addEventListener("click", () => {
+    if (input.includes("+")){
+        const mathsArray = input.split("+");
+        const equation = (previousValue, currentValue) => 
+        parseFloat(previousValue) + parseFloat(currentValue);
+        answer = mathsArray.reduce(equation);
+        document.querySelector(".answer-display").value = answer;
+        input ="";
+        document.querySelector(".input-display").value = input;
+    } else if (input.includes("-")){
+        const mathsArray = input.split("-");
+        const equation = (previousValue, currentValue) =>
+        parseFloat(previousValue) - parseFloat(currentValue);
+        answer = mathsArray.reduce(equation);
+        document.querySelector(".answer-display").value = answer;
+        input = "";
+        document.querySelector(".input-dislpay").value = input;
+    } else if (input.includes("*")){
+        const mathsArray = input.split("*");
+        const equation = (previousValue,currentValue) => 
+        parseFloat(previousValue) * parseFloat(currentValue);
+        answer = mathsArray.reduce(equation);
+        document.querySelector(".answer-display").value = answer;
+        input = "";
+        document.querySelector(".input-display").value = input;
+    } else if (input.includes("/")) {
+        const mathsArray = input.split("/");
+        const equation = (previousValue, currentValue) =>
+        parseFloat(previousValue) / parseFloat(currentValue);
+        answer = mathsArray.reduce(equation);
+        document.querySelector(".answer-display").value = answer;
+        input = "";
+        document.querySelector(".input-display").value = input;
+    } else {
+        answer = input;
+        input = "";
+    }
+});
+};
 
-
-
-
-
-}
