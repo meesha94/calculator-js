@@ -20,6 +20,7 @@ for (let index = 0; index < numberButtons.length; index++) {
 
 
 // iterare through operation keys, turn them into numbers from strings and what sum to do with each operation
+//split at point where operator is used and then use .reduce method to calclaute the equation
 //then use the equals key to give functionalty to operations keys and show user the result
 for (let index = 0; index<operationButtons.length; index++) {
     operationButtons[index].addEventListener("click", () => {
@@ -53,6 +54,8 @@ for (let index = 0; index<operationButtons.length; index++) {
         }
     })
 
+//when user clicks on equals button and the input includes a certain operator then complete the equation
+// gives the answer in a seperate display window and clears the input window
 equalsButton.addEventListener("click", () => {
     if (input.includes("+")){
         const mathsArray = input.split("+");
@@ -99,8 +102,8 @@ equalsButton.addEventListener("click", () => {
 //clear both displays when AC button is pressed
 
 const clearDisplay = () => {
-    input.value = "";
-    answer.value = "";
+    //input.value = "";
+    //answer.value = "";
     document.querySelector(".answer-display").value = "";
     document.querySelector(".input-display").value = "";
   };
