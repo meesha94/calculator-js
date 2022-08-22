@@ -5,7 +5,6 @@ var numberButtons = document.querySelectorAll(".number");
 var operationButtons = document.querySelectorAll(".operation");
 var equalsButton = document.querySelector(".equals");
 var clearButton = document.querySelector(".clear");
-var operators = ("+", "-", "*", "/");
 var answer = "";
 var input = ""; //iterate through number buttons and return the specific numnber
 
